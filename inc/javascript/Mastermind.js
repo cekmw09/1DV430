@@ -48,6 +48,8 @@ var Mastermind = {
 
             optionA.onclick = function (e) {
                 SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
+                gameBoard.removeChild(menu);
+                return false;
             }
         }
 
