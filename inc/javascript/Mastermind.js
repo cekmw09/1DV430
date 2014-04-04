@@ -6,6 +6,7 @@ var Mastermind = {
 	init: function (e) {
 		Mastermind.renderLogo();
 		Mastermind.renderMenu();
+		SoundPlayer("background", "inc/sound/background.mp3", 132000, true);
 	},
 	
 	renderLogo: function() {
