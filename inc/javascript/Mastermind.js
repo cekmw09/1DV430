@@ -27,7 +27,7 @@ var Mastermind = {
 			"Credits"
 		);
 
-        menu.setAttribute("id", "menu");
+        menu.setAttribute("id", "frame");
 
         for (var option in options) {
             that = options[option];
@@ -48,7 +48,7 @@ var Mastermind = {
 
             optionA.onclick = function (e) {
                 SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
-                gameBoard.removeChild(menu);
+                gameBoard.removeChild(frame);
                 return false;
             }
         }
