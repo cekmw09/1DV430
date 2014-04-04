@@ -19,6 +19,7 @@ var Mastermind = {
     renderMenu: function () {
         var menu = document.createElement("ul");
         var that;
+		var openFrame;
         var optionLi, optionA, optionText;
         var options = new Array(
 			"Play",
@@ -49,6 +50,9 @@ var Mastermind = {
             optionA.onclick = function (e) {
                 SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
                 gameBoard.removeChild(frame);
+				openFrame = document.createElement("div");
+				openFrame.id = "frame";
+				gameBoard.appendChild(openFrame);
                 return false;
             }
         }
