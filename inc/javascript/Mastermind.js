@@ -44,7 +44,7 @@ var Mastermind = {
 			}
 			
 			optionA.onclick = function() {
-				
+				SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
 			}
 		}
 		
