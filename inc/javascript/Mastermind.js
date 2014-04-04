@@ -40,7 +40,7 @@ var Mastermind = {
 			menu.appendChild(optionLi);
 			
 			optionA.onmouseover = function() {
-				
+				SoundPlayer("hover", "inc/sound/hover.mp3", 1000, false);
 			}
 			
 			optionA.onclick = function() {
