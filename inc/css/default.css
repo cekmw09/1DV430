@@ -11,4 +11,9 @@
 	font-family: "Uptown Elegance Regular";
 	background-image: url("../graphics/brickwall.jpg");
 	background-repeat: repeat;
+	cursor: url("../cursors/oxy-black/left_ptr.cur"), default;
+}
+
+#mastermind a {
+	cursor: url("../cursors/oxy-black/pointing_hand.cur"), pointer;
 }
