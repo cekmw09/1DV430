@@ -53,6 +53,7 @@ var Mastermind = {
 				openFrame = document.createElement("div");
 				openFrame.id = "frame";
 				gameBoard.appendChild(openFrame);
+				Mastermind.runFunction(this.id);
                 return false;
             }
         }
