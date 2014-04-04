@@ -3,7 +3,7 @@
 var Mastermind = {
     gameBoard: document.getElementById("gameBoard"),
 
-    init: function (e) {
+    init: function () {
         Mastermind.renderLogo();
         Mastermind.renderMenu();
         SoundPlayer("background", "inc/sound/background.mp3", 132000, true);
