@@ -28,3 +28,27 @@
 #mastermind a {
 	cursor: url("../cursors/oxy-black/pointing_hand.cur"), pointer;
 }
+
+#mastermind ul {
+	margin-top: 100px;
+	padding: 0;
+	list-style-type: none;
+}
+
+#mastermind ul li a {
+	color: rgba(128,128,128,0.5);
+	font-size: 72px;
+	text-decoration: none;
+	-webkit-transform: scale(.5);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 200ms;
+}
+
+#mastermind ul li a:hover {
+	font-weight: bold;
+	color: rgba(255,255,255,0.5);
+	-webkit-transform: scale(1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 200ms;
+	position: relative;
+}
