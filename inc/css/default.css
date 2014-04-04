@@ -1,3 +1,13 @@
+@-webkit-keyframes backgroundAnimation {
+	from {
+		background-position: 0 0;
+	}
+	
+	to {
+		background-position: 400000px 400000px;
+	}
+}
+
 @font-face {
 	font-family: "Uptown Elegance Regular";
 	src: url("../fonts/Uptown Elegance Regular.ttf");
@@ -11,6 +21,7 @@
 	font-family: "Uptown Elegance Regular";
 	background-image: url("../graphics/brickwall.jpg");
 	background-repeat: repeat;
+	-webkit-animation: backgroundAnimation 4000s infinite;
 	cursor: url("../cursors/oxy-black/left_ptr.cur"), default;
 }
 
