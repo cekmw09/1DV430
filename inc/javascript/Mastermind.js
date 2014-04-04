@@ -58,7 +58,14 @@ var Mastermind = {
         }
 
         gameBoard.appendChild(menu);
-    }
+    },
+	
+	runFunction: function(name, args) {
+		var func = window[name];
+		if(typeof func !== 'function')
+			return;
+		func.apply(window, args);
+	}
 }
 
 window.onload = function() {
