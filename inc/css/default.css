@@ -63,3 +63,9 @@
 	margin: 20px auto;
 	border-radius: 4px;
 }
+
+#mastermind #menuButton {
+	position: absolute;
+	left: 30px;
+	top: 70px;
+}
