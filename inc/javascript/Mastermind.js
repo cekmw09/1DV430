@@ -21,7 +21,7 @@ var Mastermind = {
         var that;
 		var openFrame;
         var optionLi, optionA, optionText;
-		var menuButton; 
+		var menuButton, menuButtonIMG;
         var options = new Array(
 			"Play",
 			"Settings",
@@ -56,9 +56,15 @@ var Mastermind = {
 				gameBoard.appendChild(openFrame);
 				Mastermind.runFunction(this.id);
 				
-				menuButton = document.createElement("img");
-				menuButton.id = "menuButton";
-				menuButton.src = "inc/graphics/menuButton.png";
+				menuButton = document.createElement("a");
+				menuButton.href = "#";
+				
+				menuButtonIMG = document.createElement("img");
+				menuButtonIMG.id = "menuButton";
+				menuButtonIMG.src = "inc/graphics/menuButton.png";
+				
+				menuButton.appendChild(menuButtonIMG);
+				
 				gameBoard.appendChild(menuButton);
 				
 				menuButton.onclick = function() {
