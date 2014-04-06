@@ -8,6 +8,16 @@
 	}
 }
 
+@-webkit-keyframes fadein {
+	from {
+			background: rgba(140, 140, 140, 0);
+	}
+	
+	to {
+		background: rgba(140, 140, 140, 0.9);
+	}
+}
+
 @font-face {
 	font-family: "Uptown Elegance Regular";
 	src: url("../fonts/Uptown Elegance Regular.ttf");
@@ -59,10 +69,11 @@
 #mastermind div#frame {
 	width: 800px;
 	min-height: 400px;
-	background: rgba(140, 140, 140, 0.5);
+	background: rgba(140, 140, 140, 0.9);
 	margin: 20px auto;
 	padding: 20px;
 	border-radius: 4px;
+	-webkit-animation: fadein 2s;
 }
 
 #mastermind #menuButton {
