@@ -76,6 +76,7 @@ var Mastermind = {
 					gameBoard.removeChild(frame);
 					Mastermind.renderMenu();
 					gameBoard.removeChild(menuButton);
+					return false;
 				}
 				
                 return false;
