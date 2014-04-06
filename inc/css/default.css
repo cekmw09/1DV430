@@ -8,7 +8,7 @@
 	}
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeInBackground {
 	from {
 			background: rgba(140, 140, 140, 0);
 	}
@@ -73,7 +73,7 @@
 	margin: 20px auto;
 	padding: 20px;
 	border-radius: 4px;
-	-webkit-animation: fadein 2s;
+	-webkit-animation: fadeInBackground 2s;
 }
 
 #mastermind #menuButton {
