@@ -8,16 +8,6 @@
 	}
 }
 
-@-webkit-keyframes fadeInBackground {
-	from {
-	background: url("../graphics/frameTexture0.png");
-	}
-	
-	to {
-		background: url("../graphics/frameTexture.png");
-	}
-}
-
 @-webkit-keyframes fadeIn {
 	from {
 		opacity: 0.4;
@@ -77,13 +67,16 @@
 }
 
 #mastermind div#frame {
-	width: 800px;
-	min-height: 400px;
-	background: url("../graphics/frameTexture.png");
+	width: 1004px;
+	min-height: 476px;
+	background: url("../graphics/frame1.png");
+	background-repeat: no-repeat;
 	margin: 20px auto;
 	padding: 20px;
-	border-radius: 4px;
-	-webkit-animation: fadeInBackground 2s;
+}
+
+#mastermind #leftBorder {
+	background: url("../graphics/frameTexture.png");
 }
 
 #mastermind #menuButton {
