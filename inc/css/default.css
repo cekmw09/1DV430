@@ -10,7 +10,7 @@
 
 @-webkit-keyframes fadeInBackground {
 	from {
-			background: rgba(140, 140, 140, 0);
+		background: rgba(140, 140, 140, 0);
 	}
 	
 	to {
@@ -20,7 +20,7 @@
 
 @-webkit-keyframes fadeIn {
 	from {
-			opacity: 0.4;
+		opacity: 0.4;
 	}
 	
 	to {
