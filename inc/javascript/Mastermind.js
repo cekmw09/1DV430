@@ -67,7 +67,12 @@ var Mastermind = {
 				
 				gameBoard.appendChild(menuButton);
 				
+				menuButton.onmouseover = function() {
+					SoundPlayer("hover", "inc/sound/hover.mp3", 1000, false);
+				}
+				
 				menuButton.onclick = function() {
+				    SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
 					gameBoard.removeChild(frame);
 					Mastermind.renderMenu();
 					gameBoard.removeChild(menuButton);
