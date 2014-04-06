@@ -91,9 +91,13 @@
 	left: 30px;
 	top: 70px;
 	opacity: 0.5;
+	-webkit-transform: scale(0.5);
 }
 
 #mastermind #menuButton:hover {
 	-webkit-animation: fadeIn 1s;
 	opacity: 1;
+	-webkit-transform: scale(1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 200ms;
 }
