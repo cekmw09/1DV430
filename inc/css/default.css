@@ -88,8 +88,8 @@
 
 #mastermind #menuButton {
 	position: absolute;
-	left: 30px;
-	top: 70px;
+	left: 330px;
+	top: 150px;
 	opacity: 0.5;
 	-webkit-transform: scale(0.5);
 }
