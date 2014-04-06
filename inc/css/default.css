@@ -58,9 +58,10 @@
 
 #mastermind div#frame {
 	width: 800px;
-	height: 400px;
+	min-height: 400px;
 	background: rgba(140, 140, 140, 0.5);
 	margin: 20px auto;
+	padding: 20px;
 	border-radius: 4px;
 }
 
