@@ -18,6 +18,16 @@
 	}
 }
 
+@-webkit-keyframes fadeIn {
+	from {
+			opacity: 0.4;
+	}
+	
+	to {
+		oacity: 1;
+	}
+}
+
 @font-face {
 	font-family: "Uptown Elegance Regular";
 	src: url("../fonts/Uptown Elegance Regular.ttf");
@@ -80,4 +90,10 @@
 	position: absolute;
 	left: 30px;
 	top: 70px;
+	opacity: 0.5;
+}
+
+#mastermind #menuButton:hover {
+	-webkit-animation: fadeIn 1s;
+	opacity: 1;
 }
