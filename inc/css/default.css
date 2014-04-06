@@ -10,11 +10,11 @@
 
 @-webkit-keyframes fadeInBackground {
 	from {
-		background: rgba(140, 140, 140, 0);
+	background: url("../graphics/frameTexture0.png");
 	}
 	
 	to {
-		background: rgba(140, 140, 140, 0.9);
+		background: url("../graphics/frameTexture.png");
 	}
 }
 
@@ -79,7 +79,7 @@
 #mastermind div#frame {
 	width: 800px;
 	min-height: 400px;
-	background: rgba(140, 140, 140, 0.9);
+	background: url("../graphics/frameTexture.png");
 	margin: 20px auto;
 	padding: 20px;
 	border-radius: 4px;
