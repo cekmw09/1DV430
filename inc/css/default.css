@@ -69,7 +69,7 @@
 
 #mastermind ul li a:hover {
 	font-weight: bold;
-	color: rgba(255,255,255,0.5);
+	color: rgba(255,255,255,1);
 	-webkit-transform: scale(1);
 	-webkit-transition-timing-function: ease-out;
 	-webkit-transition-duration: 200ms;
