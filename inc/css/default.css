@@ -87,9 +87,9 @@
 }
 
 #mastermind #menuButton {
-	position: relative;
-	left: -380px;
-	top: -560px;
+	position: absolute;
+	left: 0;
+	top: 10px;
 	opacity: 0.5;
 	-webkit-transform: scale(0.5);
 }
