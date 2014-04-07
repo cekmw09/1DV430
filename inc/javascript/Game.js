@@ -8,10 +8,6 @@ Mastermind.game = {
     init: function () {
         Mastermind.game.renderLogo();
         Mastermind.game.renderMenu();
-		
-		var sound = new SeamlessLoop();
-		sound.addUri("inc/sound/background.mp3", 132000, "music");
-		sound.start("music");
     },
 
     renderLogo: function () {
@@ -49,26 +45,7 @@ Mastermind.game = {
             optionLi.appendChild(optionA);
             menu.appendChild(optionLi);
 
-            optionA.onmouseover = function () {
-				var sound = new SeamlessLoop();
-				sound.addUri("inc/sound/hover.mp3", 1000, "sfx");
-				sound.start("sfx");
-				
-				setTimeout(function(){
-					sound.stop("sfx");
-				}, 1000);
-            }
-
             optionA.onclick = function (e) {
-				var sound = new SeamlessLoop();
-				
-				sound.addUri("inc/sound/click.mp3", 1000, "sfx");
-				sound.start("sfx");
-				
-				setTimeout(function(){
-					sound.stop("sfx");
-				}, 1000);
-				
                 gameBoard.removeChild(frame);
 				openFrame = document.createElement("div");
 				openFrame.id = "frame";
@@ -86,25 +63,7 @@ Mastermind.game = {
 				
 				gameBoard.appendChild(menuButton);
 				
-				menuButton.onmouseover = function() {
-					var sound = new SeamlessLoop();
-					sound.addUri("inc/sound/hover.mp3", 1000, "sfx");
-					sound.start("sfx");
-					
-					setTimeout(function(){
-						sound.stop("sfx");
-					}, 1000);
-				}
-				
 				menuButton.onclick = function() {
-					var sound = new SeamlessLoop();
-					sound.addUri("inc/sound/click.mp3", 1000, "sfx");
-					sound.start("sfx");
-					
-					setTimeout(function(){
-						sound.stop("sfx");
-					}, 1000);
-
 					gameBoard.removeChild(frame);
 					Mastermind.game.renderMenu();
 					gameBoard.removeChild(menuButton);
