@@ -2,7 +2,7 @@
 
 var Mastermind = Mastermind || {};
 
-Mastermind.game = Mastermind.game || {
+Mastermind.game = {
     gameBoard: document.getElementById("gameBoard"),
 
     init: function () {
