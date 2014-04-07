@@ -1,13 +1,13 @@
 "use strict";
 
-var MASTERMIND = MASTERMIND || {};
+var Mastermind = Mastermind || {};
 
-MASTERMIND.game = MASTERMIND.game || {
+Mastermind.game = Mastermind.game || {
     gameBoard: document.getElementById("gameBoard"),
 
     init: function () {
-        MASTERMIND.game.renderLogo();
-        MASTERMIND.game.renderMenu();
+        Mastermind.game.renderLogo();
+        Mastermind.game.renderMenu();
         SoundPlayer("background", "inc/sound/background.mp3", 132000, true);
     },
 
@@ -56,7 +56,7 @@ MASTERMIND.game = MASTERMIND.game || {
 				openFrame = document.createElement("div");
 				openFrame.id = "frame";
 				gameBoard.appendChild(openFrame);
-				MASTERMIND.game.runFunction(this.id);
+				Mastermind.game.runFunction(this.id);
 				
 				menuButton = document.createElement("a");
 				menuButton.href = "#";
@@ -76,7 +76,7 @@ MASTERMIND.game = MASTERMIND.game || {
 				menuButton.onclick = function() {
 				    SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
 					gameBoard.removeChild(frame);
-					MASTERMIND.game.renderMenu();
+					Mastermind.game.renderMenu();
 					gameBoard.removeChild(menuButton);
 					return false;
 				}
@@ -97,5 +97,5 @@ MASTERMIND.game = MASTERMIND.game || {
 }
 
 window.onload = function() {
-	MASTERMIND.game.init();
+	Mastermind.game.init();
 }
