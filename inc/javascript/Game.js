@@ -1,11 +1,13 @@
 "use strict";
 
-var Game = {
+var MASTERMIND = MASTERMIND || {};
+
+MASTERMIND.game = MASTERMIND.game || {
     gameBoard: document.getElementById("gameBoard"),
 
     init: function () {
-        Game.renderLogo();
-        Game.renderMenu();
+        MASTERMIND.game.renderLogo();
+        MASTERMIND.game.renderMenu();
         SoundPlayer("background", "inc/sound/background.mp3", 132000, true);
     },
 
@@ -54,7 +56,7 @@ var Game = {
 				openFrame = document.createElement("div");
 				openFrame.id = "frame";
 				gameBoard.appendChild(openFrame);
-				Game.runFunction(this.id);
+				MASTERMIND.game.runFunction(this.id);
 				
 				menuButton = document.createElement("a");
 				menuButton.href = "#";
@@ -74,7 +76,7 @@ var Game = {
 				menuButton.onclick = function() {
 				    SoundPlayer("click", "inc/sound/click.mp3", 1000, false);
 					gameBoard.removeChild(frame);
-					Game.renderMenu();
+					MASTERMIND.game.renderMenu();
 					gameBoard.removeChild(menuButton);
 					return false;
 				}
@@ -95,5 +97,5 @@ var Game = {
 }
 
 window.onload = function() {
-	Game.init();
+	MASTERMIND.game.init();
 }
