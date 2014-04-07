@@ -2,7 +2,6 @@
 
 function Play() {
 	var secretCode = Play.prototype.secretCode();
-	alert(secretCode);
 }
 
 Play.prototype.secretCode = function() {
