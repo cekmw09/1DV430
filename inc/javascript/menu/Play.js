@@ -3,15 +3,28 @@
 var Mastermind = Mastermind || {};
 
 Mastermind.play = function() {
+	Mastermind.play.showIntro();
 	var secretCode = Mastermind.play.secretCode();
 }
 
-Mastermind.play.secretCode = function() {
-	var i = 7, out = new Array();
-	for(var j = 0; j < 4; j++) {
-		out[j] = Math.floor(Math.random() * (i + 1));
-	}
-	return out;
+Mastermind.play.showIntro = function() {
+	var introFrame = document.createElement("div");
+	var i = 0;
+	var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+	var timer;
+	
+	introFrame.id = "introFrame";
+	
+	document.getElementById("frame").appendChild(introFrame);
+	
+	timer = setInterval(function() {
+		introFrame.innerHTML += text[i];
+		i += 1;
+		
+		if(i >= text.length) {
+			clearInterval(timer);
+		}
+	}, 50);
 }
 
 Mastermind.play.compareArrays = function(arr1, arr2) {
@@ -33,5 +46,13 @@ Mastermind.play.compareArrays = function(arr1, arr2) {
 		
 	out = [correct, exists];
 	
+	return out;
+}
+
+Mastermind.play.secretCode = function() {
+	var i = 7, out = new Array();
+	for(var j = 0; j < 4; j++) {
+		out[j] = Math.floor(Math.random() * (i + 1));
+	}
 	return out;
 }

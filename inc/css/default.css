@@ -94,3 +94,11 @@
 	-webkit-transition-timing-function: ease-out;
 	-webkit-transition-duration: 200ms;
 }
+
+#mastermind  #introFrame {
+	width: 500px;
+	margin: 20px auto;
+	padding: 20px;
+	font-size: 24px;
+	text-align: left;
+}
