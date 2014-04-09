@@ -1,10 +1,12 @@
 "use strict";
 
-function Play() {
-	var secretCode = Play.prototype.secretCode();
+var Mastermind = Mastermind || {};
+
+Mastermind.play = function() {
+	var secretCode = Mastermind.play.secretCode();
 }
 
-Play.prototype.secretCode = function() {
+Mastermind.play.secretCode = function() {
 	var i = 7, out = new Array();
 	for(var j = 0; j < 4; j++) {
 		out[j] = Math.floor(Math.random() * (i + 1));
@@ -12,7 +14,7 @@ Play.prototype.secretCode = function() {
 	return out;
 }
 
-Play.prototype.compareArrays = function(arr1, arr2) {
+Mastermind.play.compareArrays = function(arr1, arr2) {
 	var correct = 0, exists = 0, out = new Array();
 	
 	for(var i=0; i < arr1.length; i++) {
