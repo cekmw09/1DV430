@@ -78,7 +78,7 @@ Mastermind.menu = {
     },
 	
 	runFunction: function(name, args) {
-		var func = window["Mastermind"][name];
+		var func = window["Mastermind"][name.toLowerCase()];
 		if(typeof func !== 'function')
 			return;
 		func.apply(window, args);

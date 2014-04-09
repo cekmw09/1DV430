@@ -2,7 +2,7 @@
 
 var Mastermind = Mastermind || {};
 
-Mastermind.Credits = function() {
+Mastermind.credits = function() {
 	var frame = document.getElementById("frame");
 	var out;
 	var data = [
@@ -13,10 +13,10 @@ Mastermind.Credits = function() {
 		["Visual artist",	"Märta Gasslander"]
 	];
 	
-	Mastermind.Credits.mergeText(data);
+	Mastermind.credits.mergeText(data);
 }
 
-Mastermind.Credits.mergeText = function(data) {
+Mastermind.credits.mergeText = function(data) {
 	var headline;
 	var text;
 	
