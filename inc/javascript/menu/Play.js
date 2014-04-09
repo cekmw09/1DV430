@@ -17,14 +17,16 @@ Mastermind.play.showIntro = function() {
 	
 	document.getElementById("frame").appendChild(introFrame);
 	
-	timer = setInterval(function() {
-		introFrame.innerHTML += text[i];
-		i += 1;
-		
-		if(i >= text.length) {
-			clearInterval(timer);
-		}
-	}, 50);
+	setTimeout(function(){
+		timer = setInterval(function() {
+			introFrame.innerHTML += text[i];
+			i += 1;
+			
+			if(i >= text.length) {
+				clearInterval(timer);
+			}
+		}, 50);
+	},500);
 }
 
 Mastermind.play.compareArrays = function(arr1, arr2) {
