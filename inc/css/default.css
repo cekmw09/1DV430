@@ -18,9 +18,19 @@
 	}
 }
 
+@-webkit-keyframes blink {
+    0% { color: red; }
+    100% { color: black; }
+}
+
 @font-face {
-	font-family: "Uptown Elegance Regular";
-	src: url("../fonts/Uptown Elegance Regular.ttf");
+	font-family: "Mary Jane Antique";
+	src: url("../fonts/MJANTIQ_.ttf");
+}
+
+@font-face {
+	font-family: "mevno2";
+	src: url("../fonts/mevno2.ttf");
 }
 
 #mastermind {
@@ -28,7 +38,7 @@
 	padding-top: 30px;
 	text-align: center;
 	background-color: #333;
-	font-family: "Uptown Elegance Regular";
+	font-family: "Mary Jane Antique";
 	background-image: url("../graphics/brickwall.jpg");
 	background-repeat: repeat;
 	-webkit-animation: backgroundAnimation 4000s infinite;
@@ -101,4 +111,13 @@
 	padding: 20px;
 	font-size: 24px;
 	text-align: left;
+}
+
+#mastermind  #introFrame:first-letter {
+	font-family: mevno2;
+	font-size: 95px;
+	float: left;
+	height: 95px;
+	opacity: 0.8;
+	color: #900;
 }
