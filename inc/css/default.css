@@ -94,15 +94,22 @@
 	background: url("../graphics/frameTexture.png");
 }
 
-#mastermind #menuButton {
+#mastermind #menuButton, #mastermind #next {
 	position: absolute;
-	left: 0;
 	top: 10px;
 	opacity: 0.5;
 	-webkit-transform: scale(0.5);
 }
 
-#mastermind #menuButton:hover {
+#mastermind #menuButton {
+	left: 0;
+}
+
+#mastermind #next {
+	right: 0;
+}
+
+#mastermind #menuButton:hover, #mastermind #next:hover  {
 	-webkit-animation: fadeIn 1s;
 	opacity: 1;
 	-webkit-transform: scale(1);

@@ -8,14 +8,22 @@ Mastermind.play = function() {
 }
 
 Mastermind.play.showIntro = function() {
+	var frame = document.getElementById("frame");
 	var introFrame = document.createElement("p");
+	var nextA = document.createElement("a");
+	var nextImg = document.createElement("img");
 	var i = 0;
 	var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 	var timer;
 	
 	introFrame.id = "introFrame";
 	
-	document.getElementById("frame").appendChild(introFrame);
+	nextImg.id = "next";
+	nextImg.src = "inc/graphics/next.png";
+	
+	nextA.appendChild(nextImg);
+	frame.appendChild(nextA);
+	frame.appendChild(introFrame);
 	
 	setTimeout(function(){
 		timer = setInterval(function() {
