@@ -60,8 +60,8 @@
 }
 
 #mastermind ul li a {
-	color: rgba(128,128,128,0.5);
-	font-size: 72px;
+	color: rgba(200,200,200,0.5);
+	font-size: 48px;
 	text-decoration: none;
 	-webkit-transform: scale(.5);
 	-webkit-transition-timing-function: ease-out;
