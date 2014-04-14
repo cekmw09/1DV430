@@ -134,3 +134,11 @@
 	color: #900;
 	margin: 0 20px 20px 0;
 }
+
+#mastermind #edwine {
+
+	position: absolute;
+	height: 400px;
+	bottom: 0;
+	left: 0;
+}
