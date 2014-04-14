@@ -96,7 +96,7 @@
 
 #mastermind #menuButton, #mastermind #next {
 	position: absolute;
-	bottom: 500px;
+	top: 30%;
 	opacity: 0.5;
 	-webkit-transform: scale(0.8);
 }
