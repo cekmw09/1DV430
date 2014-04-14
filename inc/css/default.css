@@ -96,17 +96,17 @@
 
 #mastermind #menuButton, #mastermind #next {
 	position: absolute;
-	top: 10px;
+	bottom: 500px;
 	opacity: 0.5;
-	-webkit-transform: scale(0.5);
+	-webkit-transform: scale(0.8);
 }
 
 #mastermind #menuButton {
-	left: 0;
+	left: 20px;
 }
 
 #mastermind #next {
-	right: 0;
+	right: 20px;
 }
 
 #mastermind #menuButton:hover, #mastermind #next:hover  {
