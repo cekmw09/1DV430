@@ -23,6 +23,27 @@
     100% { color: black; }
 }
 
+@-webkit-keyframes edwineStanding {
+    0% { background-image: url("../graphics/animations/edwine/standing/1.png"); }
+    4% { background-image: url("../graphics/animations/edwine/standing/1.png"); }
+    5% { background-image: url("../graphics/animations/edwine/standing/2.png"); }
+    10% { background-image: url("../graphics/animations/edwine/standing/3.png"); }
+    15% { background-image: url("../graphics/animations/edwine/standing/4.png"); }
+    20% { background-image: url("../graphics/animations/edwine/standing/5.png"); }
+    25% { background-image: url("../graphics/animations/edwine/standing/4.png"); }
+    30% { background-image: url("../graphics/animations/edwine/standing/3.png"); }
+    35% { background-image: url("../graphics/animations/edwine/standing/2.png"); }
+    40% { background-image: url("../graphics/animations/edwine/standing/1.png"); }
+}
+
+@-webkit-keyframes edwineTalking {
+    0% { background-image: url("../graphics/animations/edwine/talking/1.png"); }
+    25% { background-image: url("../graphics/animations/edwine/talking/2.png"); }
+    50% { background-image: url("../graphics/animations/edwine/talking/3.png"); }
+    75% { background-image: url("../graphics/animations/edwine/talking/4.png"); }
+    100% { background-image: url("../graphics/animations/edwine/talking/3.png"); }
+}
+
 @font-face {
 	font-family: "Mary Jane Antique";
 	src: url("../fonts/MJANTIQ_.ttf");
@@ -135,9 +156,22 @@
 	margin: 0 20px 20px 0;
 }
 
-#mastermind #edwine {
+#mastermind #edwineStanding {
 	position: fixed;
+	width: 712px;
 	height: 500px;
 	bottom: 0;
 	left: 0;
+	background-image: url("../graphics/animations/edwine/standing/1.png");
+	-webkit-animation: edwineStanding 5s infinite;
+}
+
+#mastermind #edwineTalking {
+	position: fixed;
+	width: 712px;
+	height: 500px;
+	bottom: 0;
+	left: 0;
+	background-image: url("../graphics/animations/edwine/talking/1.png");
+	-webkit-animation: edwineTalking 1s infinite;
 }

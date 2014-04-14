@@ -16,9 +16,8 @@ Mastermind.play.showIntro = function() {
 	var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 	var timer;
 	
-	var edwine = document.createElement("img");
-	edwine.id = "edwine";
-	edwine.src = "inc/graphics/edwine.png";
+	var edwine = document.createElement("div");
+	edwine.id = "edwineTalking";
 	
 	introFrame.id = "introFrame";
 	
@@ -37,9 +36,11 @@ Mastermind.play.showIntro = function() {
 			
 			if(i >= text.length) {
 				clearInterval(timer);
+				edwine.id = "edwineStanding";
 			}
 		}, 50);
 	},500);
+	
 }
 
 Mastermind.play.compareArrays = function(arr1, arr2) {
