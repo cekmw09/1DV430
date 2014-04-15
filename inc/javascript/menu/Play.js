@@ -4,6 +4,9 @@ var Mastermind = Mastermind || {};
 
 Mastermind.play = function() {
 	Mastermind.play.showIntro();
+}
+
+Mastermind.gameStart = function() {
 	var secretCode = Mastermind.play.secretCode();
 }
 
@@ -15,7 +18,6 @@ Mastermind.play.showIntro = function() {
 	var i = 0;
 	var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 	var timer;
-	
 	var edwine = document.createElement("div");
 	edwine.id = "edwineStanding";
 	
@@ -42,6 +44,13 @@ Mastermind.play.showIntro = function() {
 		}, 50);
 	},500);
 	
+	nextA.onclick = function() {
+		gameBoard.removeChild(frame);
+		frame = document.createElement("div");
+		frame.id = "frame";
+		gameBoard.appendChild(frame);
+		Mastermind.gameStart();
+	}
 }
 
 Mastermind.play.compareArrays = function(arr1, arr2) {
