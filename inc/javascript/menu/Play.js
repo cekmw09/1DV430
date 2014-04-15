@@ -17,7 +17,7 @@ Mastermind.play.showIntro = function() {
 	var timer;
 	
 	var edwine = document.createElement("div");
-	edwine.id = "edwineTalking";
+	edwine.id = "edwineStanding";
 	
 	introFrame.id = "introFrame";
 	
@@ -30,6 +30,7 @@ Mastermind.play.showIntro = function() {
 	frame.appendChild(edwine);
 	
 	setTimeout(function(){
+		edwine.id = "edwineTalking";
 		timer = setInterval(function() {
 			introFrame.innerHTML += text[i];
 			i += 1;
