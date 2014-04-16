@@ -6,7 +6,7 @@ Mastermind.play = function() {
 	Mastermind.play.showIntro();
 }
 
-Mastermind.gameStart = function() {
+Mastermind.play.gameStart = function() {
 	var secretCode = Mastermind.play.secretCode();
 }
 
@@ -49,7 +49,7 @@ Mastermind.play.showIntro = function() {
 		frame = document.createElement("div");
 		frame.id = "frame";
 		gameBoard.appendChild(frame);
-		Mastermind.gameStart();
+		Mastermind.play.gameStart();
 	}
 }
 
