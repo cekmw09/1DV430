@@ -175,3 +175,22 @@
 	background-image: url("../graphics/animations/edwine/talking/1.png");
 	-webkit-animation: edwineTalking 1s infinite;
 }
+
+#mastermind #gameTable {
+	margin: 15px auto 0 auto;
+}
+
+#mastermind #gameTable td {
+	border: 1px solid #333;
+	width: 32px;
+	height: 32px;
+	background: rgba(119, 52, 15, 0.6);
+}
+
+#mastermind #gameTable td.corner {
+	background: rgba(50, 50, 50, 0.6);
+}
+
+#mastermind #gameTable td.hidden {
+	visibility: hidden;
+}
