@@ -18,6 +18,9 @@ Mastermind.play.renderGameBoard = function () {
     var frame = document.getElementById("frame");
     var symbol;
     var symbolIndex = 0;
+    var add;
+    var copy;
+    var clicks = 0;
 
     table = document.createElement("table");
     table.id = "gameTable";
@@ -48,10 +51,26 @@ Mastermind.play.renderGameBoard = function () {
                 td.appendChild(symbol);
 
                 symbol.onclick = function () {
-
+                    clicks++;
+                    add = document.getElementById(Mastermind.play.clicks2Selector(clicks));
+                    copy = document.createElement("img");
+                    copy.src = this.src;
+                    add.appendChild(copy);
                 }
 
                 symbolIndex++;
+            }
+        }
+    }
+}
+
+Mastermind.play.clicks2Selector = function (input) {
+    var counter = 0;
+    for (var r = 9; r >= 0; r--) {
+        for (var c = 0; c <= 3; c++) {
+            counter++;
+            if (counter === input) {
+                return "c" + c + "r" + r;
             }
         }
     }
