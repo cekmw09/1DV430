@@ -6,11 +6,9 @@ Mastermind.play = function() {
 	Mastermind.play.showIntro();
 }
 
-Mastermind.play.gameStart = function() {
-	Mastermind.play.renderGameBoard();
-	var secretCode = Mastermind.play.secretCode();
-	
-	
+Mastermind.play.gameStart = function () {
+    Mastermind.play.renderGameBoard();
+    var secretCode = Mastermind.play.secretCode();
 }
 
 Mastermind.play.renderGameBoard = function () {
@@ -21,6 +19,7 @@ Mastermind.play.renderGameBoard = function () {
     var add;
     var copy;
     var clicks = 0;
+    var guessArr = [];
 
     table = document.createElement("table");
     table.id = "gameTable";
@@ -47,15 +46,21 @@ Mastermind.play.renderGameBoard = function () {
                 symbol = document.createElement("img");
                 symbol.src = "inc/graphics/colors/" + symbolIndex + ".png";
                 symbol.id = "symbol" + symbolIndex;
-
+                symbol.name = symbolIndex;
                 td.appendChild(symbol);
 
                 symbol.onclick = function () {
                     clicks++;
+                    guessArr.push(this.name);
                     add = document.getElementById(Mastermind.play.clicks2Selector(clicks));
                     copy = document.createElement("img");
                     copy.src = this.src;
                     add.appendChild(copy);
+
+                    if (clicks > 0 && clicks % 4 == 0) {
+                        alert(guessArr);
+                        guessArr = [];
+                    }
                 }
 
                 symbolIndex++;
