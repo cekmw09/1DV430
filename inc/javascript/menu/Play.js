@@ -25,6 +25,8 @@ Mastermind.play.renderGameBoard = function () {
     var hints;
     var round = 0;
 
+    alert(secretCode);
+
     table = document.createElement("table");
     table.id = "gameTable";
 
@@ -65,6 +67,11 @@ Mastermind.play.renderGameBoard = function () {
                     if (clicks > 0 && clicks % 4 == 0) {
                         round++;
                         hints = Mastermind.play.compareArrays(guessArr, secretCode);
+
+                        if (hints[0] === 4) {
+                            Mastermind.highscore();
+                        }
+
                         add2 = document.getElementById(Mastermind.play.hintSelector(round));
 
                         for (var i = 0; i < hints[0]; i++) {
