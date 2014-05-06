@@ -198,3 +198,8 @@
 #mastermind #gameTable td img {
 	height: 20px;
 }
+
+#mastermind #gameTable td img.hint {
+	height: 5px;
+	margin-right: 2px;
+}

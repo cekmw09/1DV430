@@ -17,9 +17,13 @@ Mastermind.play.renderGameBoard = function () {
     var symbol;
     var symbolIndex = 0;
     var add;
+    var add2;
     var copy;
+    var copy2;
     var clicks = 0;
     var guessArr = [];
+    var hints;
+    var round = 0;
 
     table = document.createElement("table");
     table.id = "gameTable";
@@ -59,10 +63,23 @@ Mastermind.play.renderGameBoard = function () {
                     guessArr.push(parseInt(this.name));
 
                     if (clicks > 0 && clicks % 4 == 0) {
-                        alert("Hemligt nummer " + secretCode);
-                        alert("Ditt nummer " + guessArr);
+                        round++;
+                        hints = Mastermind.play.compareArrays(guessArr, secretCode);
+                        add2 = document.getElementById(Mastermind.play.hintSelector(round));
 
-                        alert(Mastermind.play.compareArrays(guessArr, secretCode));
+                        for (var i = 0; i < hints[0]; i++) {
+                            copy2 = document.createElement("img");
+                            copy2.src = "inc/graphics/black.png";
+                            copy2.className = "hint";
+                            add2.appendChild(copy2);
+                        }
+
+                        for (var i = 0; i < hints[1]; i++) {
+                            copy2 = document.createElement("img");
+                            copy2.src = "inc/graphics/white.png";
+                            copy2.className = "hint";
+                            add2.appendChild(copy2);
+                        }
 
                         guessArr = [];
                     }
@@ -82,6 +99,16 @@ Mastermind.play.clicks2Selector = function (input) {
             if (counter === input) {
                 return "c" + c + "r" + r;
             }
+        }
+    }
+}
+
+Mastermind.play.hintSelector = function (input) {
+    var counter = 0;
+    for (var i = 9; i >= 0; i--) {
+        counter++;
+        if (counter == input) {
+            return "c4r"+ i;
         }
     }
 }
@@ -132,21 +159,25 @@ Mastermind.play.showIntro = function() {
 Mastermind.play.compareArrays = function (arr1, arr2) {
     var correct = 0, exists = 0, out = new Array();
 
-    for (var i = 0; i < arr1.length; i++) {
-        if (arr1[i] === arr2[i])
-            correct++;
+    var white = 0;
+    var black = 0;
+    var out = new Array();
+
+    for(var slot = 0; slot <= 3; slot++) {
+        if(arr1[slot] == arr2[slot]) {
+            black++;
+        }
+        else {
+            for(var s = 0; s<=3; s++) {
+                if(arr1[slot] == arr2[s]) {
+                    white++;
+                    break;
+                }
+            }
+        }
     }
-
-    if (arr1[0] === arr2[1] || arr1[0] === arr2[2] || arr1[0] === arr2[3])
-        exists++;
-    if (arr1[1] === arr2[0] || arr1[1] === arr2[2] || arr1[1] === arr2[3])
-        exists++;
-    if (arr1[2] === arr2[0] || arr1[2] === arr2[1] || arr1[2] === arr2[3])
-        exists++;
-    if (arr1[3] === arr2[0] || arr1[3] === arr2[1] || arr1[3] === arr2[2])
-        exists++;
-
-    out = [correct, exists];
+    
+    out = [black, white];
 
     return out;
 }
