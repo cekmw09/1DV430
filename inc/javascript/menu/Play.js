@@ -9,11 +9,15 @@ Mastermind.play = function() {
 Mastermind.play.gameStart = function() {
 	Mastermind.play.renderGameBoard();
 	var secretCode = Mastermind.play.secretCode();
+	
+	
 }
 
 Mastermind.play.renderGameBoard = function() {
 	var table, tr, td;
 	var frame = document.getElementById("frame");
+	var symbol;
+	var symbolIndex = 0;
 	
 	table = document.createElement("table");
 	table.id = "gameTable";
@@ -33,6 +37,13 @@ Mastermind.play.renderGameBoard = function() {
 			
 			if(col === 4 && row >= 10) {
 				td.className = "hidden";
+			}
+			
+			if(col < 4 && row >= 10) {
+				symbol = document.createElement("img");
+				symbol.src = "inc/graphics/colors/" + symbolIndex + ".png";
+				symbolIndex++;
+				td.appendChild(symbol);
 			}
 		}
 	}

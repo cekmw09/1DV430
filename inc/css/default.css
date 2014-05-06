@@ -194,3 +194,7 @@
 #mastermind #gameTable td.hidden {
 	visibility: hidden;
 }
+
+#mastermind #gameTable td img {
+	height: 30px;
+}
