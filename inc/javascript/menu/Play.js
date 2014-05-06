@@ -13,40 +13,48 @@ Mastermind.play.gameStart = function() {
 	
 }
 
-Mastermind.play.renderGameBoard = function() {
-	var table, tr, td;
-	var frame = document.getElementById("frame");
-	var symbol;
-	var symbolIndex = 0;
-	
-	table = document.createElement("table");
-	table.id = "gameTable";
-	
-	frame.appendChild(table);
-	
-	for(var row = 0; row < 12; row++) {
-		tr = document.createElement("tr");
-		table.appendChild(tr);
-		for(var col = 0; col < 5; col++) {
-			td = document.createElement("td");
-			tr.appendChild(td);
-			
-			if(col === 4 || row >= 10) {
-				td.className = "corner";
-			}
-			
-			if(col === 4 && row >= 10) {
-				td.className = "hidden";
-			}
-			
-			if(col < 4 && row >= 10) {
-				symbol = document.createElement("img");
-				symbol.src = "inc/graphics/colors/" + symbolIndex + ".png";
-				symbolIndex++;
-				td.appendChild(symbol);
-			}
-		}
-	}
+Mastermind.play.renderGameBoard = function () {
+    var table, tr, td;
+    var frame = document.getElementById("frame");
+    var symbol;
+    var symbolIndex = 0;
+
+    table = document.createElement("table");
+    table.id = "gameTable";
+
+    frame.appendChild(table);
+
+    for (var row = 0; row < 12; row++) {
+        tr = document.createElement("tr");
+        table.appendChild(tr);
+        for (var col = 0; col < 5; col++) {
+            td = document.createElement("td");
+            td.id = "c" + col + "r" + row;
+            tr.appendChild(td);
+
+            if (col === 4 || row >= 10) {
+                td.className = "corner";
+            }
+
+            if (col === 4 && row >= 10) {
+                td.className = "hidden";
+            }
+
+            if (col < 4 && row >= 10) {
+                symbol = document.createElement("img");
+                symbol.src = "inc/graphics/colors/" + symbolIndex + ".png";
+                symbol.id = "symbol" + symbolIndex;
+
+                td.appendChild(symbol);
+
+                symbol.onclick = function () {
+
+                }
+
+                symbolIndex++;
+            }
+        }
+    }
 }
 
 Mastermind.play.showIntro = function() {
