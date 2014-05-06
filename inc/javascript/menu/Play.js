@@ -24,6 +24,8 @@ Mastermind.play.renderGameBoard = function () {
     var guessArr = [];
     var hints;
     var round = 0;
+    var d = new Date();
+    var timer;
 
     alert(secretCode);
 
@@ -57,6 +59,11 @@ Mastermind.play.renderGameBoard = function () {
 
                 symbol.onclick = function () {
                     clicks++;
+
+                    if (clicks === 1) {
+                        timer = d.getTime();
+                    }
+
                     add = document.getElementById(Mastermind.play.clicks2Selector(clicks));
                     copy = document.createElement("img");
                     copy.src = this.src;
@@ -69,7 +76,7 @@ Mastermind.play.renderGameBoard = function () {
                         hints = Mastermind.play.compareArrays(guessArr, secretCode);
 
                         if (hints[0] === 4) {
-                            Mastermind.highscore();
+                            Mastermind.highscore(timer);
                         }
 
                         add2 = document.getElementById(Mastermind.play.hintSelector(round));
