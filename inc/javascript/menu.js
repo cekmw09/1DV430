@@ -4,7 +4,7 @@ var Mastermind = Mastermind || {};
 
 Mastermind.menu = {
     gameBoard: document.getElementById("gameBoard"),
-
+	
     init: function () {
         Mastermind.menu.renderLogo();
         Mastermind.menu.renderMenu();
@@ -31,7 +31,8 @@ Mastermind.menu = {
 		);
 
         menu.id = "frame";
-
+		
+		 // Skriv ut menyval
         for (var option in options) {
             that = options[option];
             optionText = document.createTextNode(that);
@@ -77,6 +78,7 @@ Mastermind.menu = {
         gameBoard.appendChild(menu);
     },
 	
+	// Kör funktionen vars namn är detsamma som menyvalet och ta in nödvändiga parametrar för funktionen
 	runFunction: function(name, args) {
 		var func = window["Mastermind"][name.toLowerCase()];
 		if(typeof func !== 'function')

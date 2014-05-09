@@ -16,6 +16,7 @@ Mastermind.credits = function() {
 	Mastermind.credits.mergeText(data);
 }
 
+// Funktion som presenterar data från en array
 Mastermind.credits.mergeText = function(data) {
 	var headline;
 	var text;
